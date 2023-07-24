@@ -20,5 +20,12 @@ export default defineConfig({
         ]
       }
     })
-  ]
+  ],
+  theme: {
+    colors: {
+      primary: {
+        500: 'hsla(var(--hue), 62%, 62%)'
+      }
+    }
+  }
 });
