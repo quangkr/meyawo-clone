@@ -1,8 +1,8 @@
 // Thanks to Jesse Couch https://codepen.io/designcouch/pen/ExvwPY
-import { useState } from 'preact/hooks';
-
 type ComponentProps = {
   size: string;
+  isOpen: boolean;
+  onClick: (e: Event) => void;
 }
 
 type SpanProps = {
@@ -16,11 +16,7 @@ function Span(props: SpanProps) {
 }
 
 export default function HamburgerButton(props: ComponentProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const onClick = (e: Event) => {
-    e.preventDefault();
-    setIsOpen(!isOpen);
-  }
+  const { isOpen, onClick } = props;
 
   return (
     <button

@@ -1,10 +1,10 @@
 ---
-import HamburgerButton from "@components/HamburgerButton";
+import Nav from "@components/Nav";
 ---
 
 <nav class="h-100px w-[100%] position-fixed top-0 left-0 z-1000 font-baloo display-flex">
   <div class="container mx-6 display-flex items-center">
     <a href="#" class="text-primary-500 decoration-none text-[length:calc(17px+1vw)] font-900">Meyawo</a>
-    <HamburgerButton size="50px" client:visible/>
+    <Nav client:load />
   </div>
 </nav>
