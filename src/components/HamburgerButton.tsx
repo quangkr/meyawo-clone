@@ -11,7 +11,13 @@ type SpanProps = {
 
 function Span(props: SpanProps) {
   return (
-    <span class={`display-block position-absolute h-[12%] w-[100%] rounded-[999px] opacity-100 duration-250 ease-in-out bg-primary-500 ${props.class}`}></span>
+    <span
+      class={`
+        display-block position-absolute h-[12%] w-[100%] rounded-[999px]
+        opacity-100 duration-250 ease-in-out bg-white
+        ${props.class}
+      `}
+    ></span>
   )
 }
 

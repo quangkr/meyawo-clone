@@ -2,9 +2,17 @@
 import Nav from "@components/Nav";
 ---
 
-<nav class="h-100px w-[100%] position-fixed top-0 left-0 z-1000 font-baloo display-flex">
-  <div class="container mx-6 display-flex items-center">
-    <a href="#" class="text-primary-500 decoration-none text-[length:calc(17px+1vw)] font-900">Meyawo</a>
+<nav
+  class="h-100px w-[100%] position-fixed top-0 left-0 z-1000 font-baloo display-flex"
+>
+  <div
+    class="container mx-auto px-6 display-flex items-center transition-width,max-width ease duration-250"
+  >
+    <a
+      href="#"
+      class="text-white decoration-none text-[length:calc(17px+1vw)] font-900"
+      >Meyawo</a
+    >
     <Nav client:load />
   </div>
 </nav>
