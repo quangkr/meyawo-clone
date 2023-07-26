@@ -12,7 +12,7 @@ export default defineConfig({
         baloo: [
           {
             name: 'Baloo 2',
-            weights: ['400', '700', '900']
+            weights: ['300', '400', '700', '900']
           },
           {
             name: 'sans-serif',

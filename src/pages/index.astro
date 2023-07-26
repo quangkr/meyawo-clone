@@ -1,82 +1,59 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Card from "@components/Card.astro";
+
+import headerSm from "@assets/images/header_sm.webp";
+import headerMd from "@assets/images/header_md.webp";
+import headerLg from "@assets/images/header_lg.webp";
+import headerXl from "@assets/images/header_xl.webp";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+    <section
+      class="position-relative h-100vh display-flex flex-col justify-center items-center"
+    >
+      <div
+        class={`
+          position-absolute w-100% h-100%
+          bg-cover bg-center z--110
+          [background-image:--bg-img-url-sm]
+          md:[background-image:--bg-img-url-md]
+          lg:[background-image:--bg-img-url-lg]
+          xl:[background-image:--bg-img-url-xl]
+        `}
+        style={{
+          "--bg-img-url-sm": `url(${headerSm.src})`,
+          "--bg-img-url-md": `url(${headerMd.src})`,
+          "--bg-img-url-lg": `url(${headerLg.src})`,
+          "--bg-img-url-xl": `url(${headerXl.src})`,
+        }}
+      >
+      </div>
+      <div
+        class="position-absolute bg-gradient-to-t from-white via-primary-500/55 via-99% to-primary-500/80 w-100% h-100% z--100"
+      >
+      </div>
+      <div>
+        <h1 class="font-baloo">
+          <span class="text-6xl text-cool-gray-500 font-700 display-block"
+            >Hi!</span
+          >
+          <span
+            class="text-7xl text-cool-gray-700 font-900 mt-6 mb-2 display-block"
+            ><span class="text-cool-gray-500">I'm</span> John Doe</span
+          >
+        </h1>
+        <p
+          class="text-2xl font-300 uppercase tracking-widest text-cool-gray-700"
+        >
+          Frontend Web Developer
+        </p>
+        <a
+          href="#"
+          class="inline-block mt-10 py-2 px-6 bg-primary-500 text-white text-lg rounded-999px"
+          >View My Works</a
+        >
+      </div>
+    </section>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>

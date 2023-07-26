@@ -6,5 +6,8 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   integrations: [UnoCSS({
     injectReset: true
-  }), preact()]
+  }), preact()],
+  experimental: {
+    assets: true
+  }
 });
