@@ -24,8 +24,18 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      primary: {
-        500: 'hsla(var(--hue), 62%, 62%)'
+      "primary": {
+        50: "#E6F8F9",
+        100: "#C9F1F3",
+        200: "#97E4E8",
+        300: "#60D6DC",
+        400: "#2DC5CD",
+        500: "#22959B",
+        600: "#166064",
+        700: "#11484B",
+        800: "#0B3032",
+        900: "#061819",
+        950: "#030C0D"
       }
     },
     breakpoints: {
