@@ -6,4 +6,4 @@ Built with Astro + UnoCSS.
 
 ## Thanks
 
-- [Freepik](https://www.freepik.com): for the assets (see [Attributions.md](./Attributions.md))
+- [Freepik](https://www.freepik.com) and [Pixabay](https://pixabay.com): for the assets (see [Attributions.md](./Attributions.md))

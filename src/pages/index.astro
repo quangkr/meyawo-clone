@@ -5,10 +5,11 @@ import headerSm from "@assets/images/header_sm.webp";
 import headerMd from "@assets/images/header_md.webp";
 import headerLg from "@assets/images/header_lg.webp";
 import headerXl from "@assets/images/header_xl.webp";
+import developer from "@assets/images/computer-146329.svg?raw";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
+  <main class="text-cool-gray-900">
     <section
       class="position-relative h-100vh display-flex flex-col justify-center items-center"
     >
@@ -50,9 +51,51 @@ import headerXl from "@assets/images/header_xl.webp";
         </p>
         <a
           href="#"
-          class="inline-block mt-10 py-2 px-6 bg-primary-500 text-white text-lg rounded-999px"
+          class="display-inline-block mt-10 py-2 px-6 bg-primary-500 text-white text-lg rounded-999px"
           >View My Works</a
         >
+      </div>
+    </section>
+    <section>
+      <div class="container mx-auto py-36">
+        <div class="display-flex flex-col md:flex-row">
+          <div class="md:flex-basis-30% lg:flex-basis-40% px-12 flex-shrink-0">
+            <div class="w-100% max-w-200px mx-auto md:me-0 text-primary-700">
+              <Fragment set:html={developer} />
+            </div>
+          </div>
+          <div class="mt-12 md:mt-0 px-8">
+            <p
+              class="text-cool-gray-500 tracking-wide text-center md:text-start"
+            >
+              Who am I?
+            </p>
+            <h2
+              class="text-2xl md:text-3xl lg:text-4xl text-center md:text-start text-primary-500 font-baloo font-900 mt-2 mb-4"
+            >
+              About me
+            </h2>
+            <p class="mb-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+              itaque vero eligendi explicabo iste, porro cupiditate aut saepe ut
+              mollitia et tempore pariatur eum soluta commodi optio voluptate
+              dolorum fugit. Natus ad impedit nesciunt nihil.
+            </p>
+            <p class="mb-3">
+              Illo consequatur reprehenderit minus possimus veritatis neque
+              corporis fugiat eaque expedita error dignissimos eius aliquid
+              veniam corrupti sit doloribus autem, placeat architecto alias
+              ipsam unde!
+            </p>
+            <div class="display-flex justify-center md:justify-start">
+              <a
+                href="#"
+                class="display-inline-block mt-5 px-3 py-1 border-1 border-primary-500 text-primary-500 bg-transparent rounded-999px"
+                >Download CV</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
